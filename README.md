@@ -1,2 +1,2 @@
 # blog
-at the cmd prompt, run `set DEBUG=blog & node .\bin\www`
+To run it, type `set DEBUG=blog & node .\bin\www` at the `cmd` prompt
