@@ -1,1 +1,1 @@
-web: set DEBUG=blog & node .\bin\www
+web: node app.js
