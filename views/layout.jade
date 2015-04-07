@@ -1,0 +1,72 @@
+doctype html
+html(lang='en')
+  head
+    link(href='/assets/normalize.css', rel='stylesheet')
+    link(href='/assets/foundation.min.css', rel='stylesheet')
+    link(href='/css/main-style.css', rel='stylesheet')
+    link(rel='stylesheet', href='/css/custom-style.css')
+    meta(charset='UTF-8')
+  body
+    nav.top-bar(data-topbar='', role='navigation')
+      ul.title-area
+        li.name
+          h1
+            a(href='/') Zenius Blog
+        // Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
+        li.toggle-topbar.menu-icon
+          a(href='#')
+            span Menu
+      section.top-bar-section
+        ul.right
+          li.has-form
+            .row.collapse
+              .small-12.large-9.columns
+                form(method='get', action='/search')
+                  input(type='text', placeholder='Search', name='q')
+          |             
+          li
+            a(href='/hot') Hot
+          |             
+          li
+            a(href='/fresh') Fresh
+          |             
+          li.has-dropdown
+            a(href='#') Categories
+            |                 
+            ul.dropdown
+              li
+                a(href='#') Zenius Info
+              |                     
+              li
+                a(href='#') Zenius Lesson
+              |                     
+              li
+                a(href='#') Zenius UN SMA
+              |                     
+              li
+                a(href='#') Zenius SBMPTN / SMNPTN
+              |                     
+              li
+                a(href='#') Zenius Story
+              |                     
+              li
+                a(href='#') Zenius Tips
+              |                     
+              li
+                a(href='#') Zenius Guide
+              |                     
+              li
+                a(href='#') Zenius Insight
+          |             
+          li
+            a(href='/post') Post Blog
+
+    br
+    .row
+      block pagecontents
+      br
+      | &copy; 2014 PT. Zenius Education. All Rights Reserved.
+    script(src='/js/vendor/jquery.js')
+    script(src='/js/foundation.min.js')
+    script.
+      $(document).foundation();
