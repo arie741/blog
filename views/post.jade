@@ -1,0 +1,24 @@
+extends layout
+
+block pagecontents
+	form(action='/action-post', method='post')
+		div.row
+			div.small-8
+				div.row
+					div.small-3.columns
+						label.right.inline(for='right-label') Judul
+					div.small-9.columns
+						input#right-label(type='text', name='judul', placeholder='Judul')
+		div.row
+			div.small-8
+				div.row
+					div.small-3.columns
+						label.right.inline(for='right-label') Isi
+					div.small-9.columns
+						input#right-label(type='text', name='isi', placeholder='Isi')
+		.row
+			.small-8
+				.row
+					.small-3.columns
+					.small-9.columns
+						button.button.tiny(type='submmit') Post
