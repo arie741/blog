@@ -4,6 +4,8 @@ var express = require('express');
 	homefresh = require('./ctrl/homefresh.js');
 	postpage = require('./ctrl/post.js');
 	blogpage = require('./ctrl/blogpage.js');
+	dbase = require('./ctrl/database.js'); 
+	database = require('./ctrl/database.js'); 
 var router = express.Router();
 
 /* GET home page. */
@@ -15,6 +17,6 @@ router.get('/fresh', homefresh.index);
 
 router.get('/post', postpage.postpage);
 
-router.get('/blog/:id', blogpage.blogpage);
+router.get('/blog/:id', blogpage.brender);
 
 module.exports = router;
