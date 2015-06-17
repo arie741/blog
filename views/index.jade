@@ -19,4 +19,10 @@ block pagecontents
       p
         | Menjelang tahun baru nanti, mungkin udah ada yang sibuk nih menyiapkan petasan dan kembang api untuk mengisi kemeriahan malam tahun baru. Sebagian besar dari kalian pasti sudah pada tau dong kalo petasan memanfaatkan mesiu sebagai bahan peledaknya. Dan salah satu unsur yang dipake untuk membuat mesiu adalah Amonia. Tapi sedikit sekali yang tahu sejarah penggunaan amonia sebagai salah satu unsur penting pembuatan bahan peledak erat sekali kaitannya dengan pengentasan ancaman kelaparan global. Loh... 
         a(href='/blog/1e4a29f1fe592cf67d68bce0017dc176') Baca Selengkapnya
-
+  
+  each cont, i in docontents
+    div.panel
+      h2= i
+        p= cont
+          a #{bid} Baca Selengkapnya
+          
