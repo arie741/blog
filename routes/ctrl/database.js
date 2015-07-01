@@ -2,7 +2,7 @@ exports.cloudant = function() {
 	var cradle = require('cradle');
 	var db = new (cradle.Connection)("jaquelton.cloudant.com", {
 		auth:{username:"jaquelton", password:"sarcasm7412335"}
-	}).database('zenblog');
+	}).database('nodeblog');
 
 	this.getTitleById = function (id, getTitleByIdCallBack){
 		db.get(id, getTitleByIdCallBack);
@@ -28,7 +28,8 @@ exports.cloudant = function() {
 		db.save(uuid, {
 			title: judul,
 			isi: isi,
-			rating: 0
+			rating: 0,
+			date: Date.now()
 		});
 	};
 };
